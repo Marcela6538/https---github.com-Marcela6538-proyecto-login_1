@@ -1,7 +1,6 @@
 //URL base del backend (actualiza con tu dominio o IP pública)d
 const API_BASE_URL = "https://proyecto-login-1.onrender.com"; // Sustituye con la URL de tu backend desplegado
 
-// Manejador para el formulario de registro
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const username = document.getElementById('registerUsername').value;
@@ -43,13 +42,3 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         alert('Error al conectar con el servidor: ' + error.message);
     }
 });
-
-
-
-
-
-
-
-
-
-
