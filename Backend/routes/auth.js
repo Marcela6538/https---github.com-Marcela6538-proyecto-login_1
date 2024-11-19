@@ -13,13 +13,13 @@ router.post('/register', async (req, res) => {
     }
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
-        console.log(hashedPassword);
         const user = new User({ username, password: hashedPassword });
         console.log(user);
         await user.save();
+        console.log('grabando')
         res.json({ message: 'Usuario registrado correctamente' });
     } catch (error) {
-        console.error();
+        console.error('error', code);
         res.status(400).json({ error: 'Error al registrar usuario' });
     }
 });
